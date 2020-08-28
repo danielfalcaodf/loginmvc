@@ -6,7 +6,7 @@ define("SITE", [
     "desc" => "Aprenda a construir uma aplicação de autenticação em MCV com php do  Jeito certo neste cursos gratuido em youtube.com/upinside",
     "domain" => "localauth.com",
     "locale" => "pt_BR",
-    "root" => "http://localhost/loginmvc/t1"
+    "root" => "https://localhost/loginmvc/t1"
 
 ]);
 // site minify
