@@ -19,6 +19,13 @@ $router->get("/senha/{email}/{forget}", "Web:reset", "web.reset");
 $router->group(null);
 $router->post("/login", "Auth:login", "auth.login");
 $router->post("/register", "Auth:register", "auth.register");
+$router->post("/forget", "Auth:forget", "auth.forget");
+$router->post("/reset", "Auth:reset", "auth.reset");
+
+// profile
+$router->group("/me");
+$router->get('/', 'App:home', 'app.home');
+$router->get('/sair', 'App:logoff', 'app.logoff');
 // errors 
 $router->group('ops');
 $router->get('/{errcode}', 'Web:error',  "web.error");

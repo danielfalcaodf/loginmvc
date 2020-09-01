@@ -51,7 +51,7 @@ function flash(string $type = null, string $message = null): ?string
     if ($type and $message) {
         $_SESSION["flash"] = [
             "type" => $type,
-            "messagem" => $message
+            "message" => $message
         ];
         return null;
     }

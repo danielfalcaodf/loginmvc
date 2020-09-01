@@ -4,15 +4,24 @@ namespace Source\Controllers;
 
 use stdClass;
 
+/**
+ * [Description Web]
+ */
 class Web extends Controller
 {
+    /**
+     * @param mixed $router
+     */
     public function __construct($router)
     {
         parent::__construct($router);
-        // if (!empty($_SESSION["user"])) {
-        //     $this->router->redirect("app.home");
-        // }
+        if (!empty($_SESSION["user"])) {
+            $this->router->redirect("app.home");
+        }
     }
+    /**
+     * @return void
+     */
     public function login(): void
     {
         $head = $this->seo->optimize(
@@ -25,6 +34,9 @@ class Web extends Controller
             "head" => $head
         ]);
     }
+    /**
+     * @return void
+     */
     public function register(): void
     {
 
@@ -43,6 +55,9 @@ class Web extends Controller
             "user" => $form_user
         ]);
     }
+    /**
+     * @return void
+     */
     public function forget(): void
     {
         $head = $this->seo->optimize(
@@ -55,6 +70,11 @@ class Web extends Controller
             "head" => $head
         ]);
     }
+    /**
+     * @param mixed $data
+     * 
+     * @return void
+     */
     public function reset($data): void
     {
         $head = $this->seo->optimize(
@@ -67,6 +87,11 @@ class Web extends Controller
             "head" => $head
         ]);
     }
+    /**
+     * @param mixed $data
+     * 
+     * @return void
+     */
     public function error($data): void
     {
         $error = filter_var($data["errcode"], FILTER_VALIDATE_INT);
