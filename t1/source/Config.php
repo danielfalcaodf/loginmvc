@@ -47,12 +47,16 @@ define("SOCIAL", [
 
 define("MAIL", [
 
-    "facebook_page" => "",
-    "facebook_author" => "",
-    "facebook_appId" => "",
+    "host" => "",
+    "port" => "",
+    "user" => "",
+    "passwd" => "",
+    "from_name" => "",
+    "from_email" => "",
 
 
 ]);
+
 // face config
 
 define("FACEBOOK_LOGIN", []);
